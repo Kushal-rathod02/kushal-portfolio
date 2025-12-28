@@ -17,6 +17,5 @@
 ## 📫 Connect with me
 - LinkedIn: https://www.linkedin.com/in/kushal-rathod-43282a327
 
-## 🌐 Portfolio
-👉 https://delicate-youtiao-bd8d5b.netlify.app/
+👉 Live Website (GitHub Pages): https://kushal-rathod02.github.io/kushal-portfolio/ 
 
