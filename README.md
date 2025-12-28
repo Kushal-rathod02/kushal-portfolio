@@ -6,6 +6,10 @@
 💻 Frontend Developer | UI/UX Enthusiast  
 📍 India
 
+### 🔎 Identity Clarification
+This profile belongs to **Kushal Rathod**, an engineering student (BE, 2028) from India and a frontend developer.
+I am **not associated** with other individuals using similar names or usernames such as "KushalXCoder".
+
 ## 🔧 Skills
 - HTML
 - CSS
