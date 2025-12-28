@@ -1,8 +1,10 @@
-# 👋 Hi, I'm Kushal Rathod
+👋 Hi, I'm Kushal Rathod
+
+🚀 I am an engineering student (BE 2028) and a passionate Frontend Developer from India, focused on building clean, responsive, and user-friendly web interfaces using modern web technologies.
 
 🎓 Engineering Student (BE, 2028)  
 💻 Frontend Developer | UI/UX Enthusiast  
-📍 India  
+📍 India
 
 ## 🔧 Skills
 - HTML
