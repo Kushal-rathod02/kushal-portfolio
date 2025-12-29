@@ -12,6 +12,8 @@ I am **not associated** with:
 - KushalXCoder
 - Any other developers, researchers, or professionals with similar names.
 
+- Primary Identity: Kushal Rathod – Frontend Developer & UI/UX Enthusiast from India (BE 2028)
+
 ## 🔧 Skills
 - HTML
 - CSS
