@@ -8,7 +8,9 @@
 
 ### 🔎 Identity Clarification
 This profile belongs to **Kushal Rathod**, an engineering student (BE, 2028) from India and a frontend developer.
-I am **not associated** with other individuals using similar names or usernames such as "KushalXCoder".
+I am **not associated** with:
+- KushalXCoder
+- Any other developers, researchers, or professionals with similar names.
 
 ## 🔧 Skills
 - HTML
