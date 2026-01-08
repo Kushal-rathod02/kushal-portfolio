@@ -2,46 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kushal Rathod | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="google-site-verification" content="6CyEl16vkcBUDpmclu-5yYWns6lZCS7RtbWbwUec1wg" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<meta name="description" content="Kushal Rathod is an engineering student (BE 2028) and frontend developer from India. View portfolio, projects, GitHub and LinkedIn." />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-<meta name="keywords" content="Kushal Rathod, Frontend Developer, Engineering Student, UI UX Developer, Web Developer India" />
-
-<meta name="author" content="Kushal Rathod" />
-
-<meta name="robots" content="index, follow" />
-  
-<style>
+  <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      text-align: center;
-      padding: 40px;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
-    h1 { color: #38bdf8; }
-    a { color: #22d3ee; text-decoration: none; }
   </style>
 </head>
-<body>
-  <h1>Hi, I'm Kushal Rathod 👋</h1>
-  <p>Engineering Student (BE, 2028)</p>
-  <p>Frontend Developer | UI/UX Enthusiast</p>
 
-  <h3>Portfolio</h3>
-  <a href="https://delicate-youtiao-bd8d5b.netlify.app/" target="_blank">
-    Visit My Portfolio
-  </a>
+<body class="bg-gray-900 text-gray-100">
 
-  <h3>Connect with me</h3>
-  <p>
-    <a href="https://www.linkedin.com/in/kushal-rathod-43282a327" target="_blank">
-      LinkedIn
+<!-- NAVBAR -->
+<header class="sticky top-0 bg-gray-900/90 backdrop-blur z-50">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold text-indigo-400">Kushal Rathod</h1>
+    <div class="space-x-4 hidden md:block">
+      <a href="#about" class="hover:text-indigo-400">About</a>
+      <a href="#skills" class="hover:text-indigo-400">Skills</a>
+      <a href="#projects" class="hover:text-indigo-400">Projects</a>
+      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div>
+    <h1 class="text-5xl md:text-7xl font-bold">
+      Hi, I'm <span class="text-indigo-400">Kushal Rathod</span>
+    </h1>
+    <p class="text-gray-400 mt-4 text-xl">
+      Aspiring Frontend Developer
+    </p>
+    <a href="#projects" class="inline-block mt-6 bg-indigo-600 px-6 py-3 rounded-full hover:bg-indigo-700">
+      View Projects
     </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 border-t border-gray-800">
+  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-8">About Me</h2>
+  <p class="max-w-3xl mx-auto text-center text-gray-300">
+    I am a B.E. student at Government Engineering College, Dahod.
+    Passionate about frontend development using HTML, CSS, Tailwind CSS
+    and building clean responsive websites.
   </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 px-6 border-t border-gray-800">
+  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-8">Skills</h2>
+  <div class="flex justify-center flex-wrap gap-4">
+    <span class="bg-indigo-700 px-4 py-2 rounded-full">HTML</span>
+    <span class="bg-indigo-700 px-4 py-2 rounded-full">CSS</span>
+    <span class="bg-indigo-700 px-4 py-2 rounded-full">Tailwind CSS</span>
+    <span class="bg-indigo-700 px-4 py-2 rounded-full">Git & GitHub</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20 px-6 border-t border-gray-800">
+  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-12">Projects</h2>
+
+  <div class="max-w-xl mx-auto bg-gray-800 rounded-xl p-6">
+    <img src="https://i.postimg.cc/zDTWfSwD/Rockerz-650-pp-renders-main-banner-124.png"
+         class="rounded-lg mb-4" />
+
+    <h3 class="text-2xl font-semibold">Wireless Headphones Landing Page</h3>
+    <p class="text-gray-400 mt-2">
+      Responsive landing page built using HTML & Tailwind CSS.
+    </p>
+
+    <div class="flex gap-4 mt-4">
+      <a href="https://kushal-rathod02.github.io/wireless-headphones-landing-page/"
+         target="_blank"
+         class="bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-700">
+        Live Demo
+      </a>
+
+      <a href="https://github.com/Kushal-rathod02/wireless-headphones-landing-page"
+         target="_blank"
+         class="border border-gray-500 px-4 py-2 rounded hover:bg-gray-700">
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 border-t border-gray-800 text-center">
+  <h2 class="text-4xl font-bold text-indigo-400 mb-6">Contact</h2>
+  <p class="text-gray-300">Email: rathodkushal037@gmail.com</p>
+  <p class="text-gray-300 mt-2">Phone: 9054334408</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-gray-500 border-t border-gray-800">
+  © 2026 | Designed & Developed by Kushal Rathod
+</footer>
+
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>
