@@ -1,119 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kushal Rathod | Portfolio</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Set default font to Inter and enable smooth scrolling */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for better aesthetics on desktop */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+        /* Custom styles for the interactive card effect */
+        .card-hover .icon-bounce {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover .icon-bounce {
+            transform: translateY(-4px); /* Slight lift on icon when hovering card */
+        }
+        .card-hover {
+             transition: all 0.3s ease;
+             border: 1px solid transparent; /* Subtle border for hover effect */
+        }
+        .card-hover:hover {
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1), 0 4px 6px -2px rgba(139, 92, 246, 0.05);
+            transform: translateY(-4px);
+            border-color: #8b5cf6; /* Highlight border on hover */
+        }
+    </style>
 </head>
+<body class="bg-gray-900 text-gray-100 antialiased">
 
-<body class="bg-gray-900 text-gray-100">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition duration-300">
+                Kushal Rathod
+            </a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md font-medium transition duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md font-medium transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md font-medium transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md font-medium transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition duration-300">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
 
-<!-- NAVBAR -->
-<header class="sticky top-0 bg-gray-900/90 backdrop-blur z-50">
-  <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-2xl font-bold text-indigo-400">Kushal Rathod</h1>
-    <div class="space-x-4 hidden md:block">
-      <a href="#about" class="hover:text-indigo-400">About</a>
-      <a href="#skills" class="hover:text-indigo-400">Skills</a>
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900/95 z-40 p-6">
+        <div class="flex justify-end">
+            <button id="mobile-menu-close" class="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-4 mt-8 text-center">
+            <a href="#about" class="text-2xl text-gray-300 hover:text-indigo-400 py-3 rounded-md transition duration-300 mobile-nav-link">About</a>
+            <a href="#skills" class="text-2xl text-gray-300 hover:text-indigo-400 py-3 rounded-md transition duration-300 mobile-nav-link">Skills</a>
+            <a href="#projects" class="text-2xl text-gray-300 hover:text-indigo-400 py-3 rounded-md transition duration-300 mobile-nav-link">Projects</a>
+            <a href="#contact" class="text-2xl text-gray-300 hover:text-indigo-400 py-3 rounded-md transition duration-300 mobile-nav-link">Contact</a>
+        </div>
     </div>
-  </nav>
-</header>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-  <div>
-    <h1 class="text-5xl md:text-7xl font-bold">
-      Hi, I'm <span class="text-indigo-400">Kushal Rathod</span>
-    </h1>
-    <p class="text-gray-400 mt-4 text-xl">
-      Aspiring Frontend Developer
-    </p>
-    <a href="#projects" class="inline-block mt-6 bg-indigo-600 px-6 py-3 rounded-full hover:bg-indigo-700">
-      View Projects
-    </a>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 px-6 border-t border-gray-800">
-  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-8">About Me</h2>
-  <p class="max-w-3xl mx-auto text-center text-gray-300">
-    I am a B.E. student at Government Engineering College, Dahod.
-    Passionate about frontend development using HTML, CSS, Tailwind CSS
-    and building clean responsive websites.
-  </p>
-</section>
+    <main class="max-w-7xl mx-auto">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center p-8 text-center">
+            <div class="max-w-4xl space-y-6">
+                <!-- Profile Picture Placeholder -->
+                <img src="https://placehold.co/150x150/8b5cf6/ffffff?text=K" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-500 shadow-xl">
 
-<!-- SKILLS -->
-<section id="skills" class="py-20 px-6 border-t border-gray-800">
-  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-8">Skills</h2>
-  <div class="flex justify-center flex-wrap gap-4">
-    <span class="bg-indigo-700 px-4 py-2 rounded-full">HTML</span>
-    <span class="bg-indigo-700 px-4 py-2 rounded-full">CSS</span>
-    <span class="bg-indigo-700 px-4 py-2 rounded-full">Tailwind CSS</span>
-    <span class="bg-indigo-700 px-4 py-2 rounded-full">Git & GitHub</span>
-  </div>
-</section>
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight leading-tight">
+                    Hi, I'm <span class="text-indigo-400">Kushal Rathod</span>
+                </h1>
+                <h2 class="text-2xl sm:text-3xl font-light text-gray-400">
+                    An <span class="font-semibold text-gray-300">Aspiring Frontend Developer</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    I build elegant, scalable solutions and thrive on turning complex problems into intuitive user experiences. Let's create something impactful together.
+                </p>
+                <div class="flex justify-center space-x-4 pt-4">
+                    <a href="#projects" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="inline-flex items-center px-8 py-3 border-2 border-indigo-600 text-base font-medium rounded-full text-indigo-400 hover:bg-indigo-600 hover:text-white transition duration-300 transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 px-6 border-t border-gray-800">
-  <h2 class="text-4xl font-bold text-center text-indigo-400 mb-12">Projects</h2>
+        <!-- 2. About Section -->
+        <section id="about" class="py-20 px-8 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">About Me</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6">
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    I am currently pursuing a **B.E. (Bachelor of Engineering)** at the **Government Engineering College, Dahod**, and am in my **2nd Year, 3rd Semester**. My journey in web development began 2 years ago, and I have dedicated myself to mastering the fundamentals of creating beautiful and functional user interfaces.
+                </p>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    My core focus is on becoming a skilled **Frontend Developer**. I already possess a solid understanding of **HTML, CSS, and Responsive Design**, and I am actively expanding my knowledge into **JavaScript frameworks like React**. I am highly motivated to contribute to innovative projects and am seeking opportunities to apply my growing skills.
+                </p>
+                <div class="pt-4 text-center">
+                     <!-- Resume link updated previously -->
+                     <a href="https://drive.google.com/file/d/1_j2xSB6s-nE5KrvC4MSqwrwBumvgsZg6/view?usp=drivesdk" target="_blank" class="inline-flex items-center px-6 py-2 border-2 border-gray-500 text-sm font-medium rounded-full text-gray-300 hover:bg-gray-700 transition duration-300">
+                         <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download Resume
+                     </a>
+                </div>
+            </div>
+        </section>
 
-  <div class="max-w-xl mx-auto bg-gray-800 rounded-xl p-6">
-    <img src="https://i.postimg.cc/zDTWfSwD/Rockerz-650-pp-renders-main-banner-124.png"
-         class="rounded-lg mb-4" />
+        <!-- 3. Skills Section (Only Frontend Fundamentals Remaining) -->
+        <section id="skills" class="py-20 px-8 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">Core Skills & Expertise</h2>
+            <div class="max-w-md mx-auto">
 
-    <h3 class="text-2xl font-semibold">Wireless Headphones Landing Page</h3>
-    <p class="text-gray-400 mt-2">
-      Responsive landing page Built using HTML & Tailwind CSS.
-    </p>
+                <!-- Skill Category 1: Frontend Fundamentals -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-2xl transition duration-300 hover:ring-2 hover:ring-indigo-500">
+                    <div class="flex items-center mb-4 text-indigo-400">
+                        <i data-lucide="code" class="w-6 h-6 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Frontend Fundamentals</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> **HTML5** (Semantic Structure)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> **CSS3** (Flexbox & Grid)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Responsive Web Design</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Tailwind CSS & Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <div class="flex gap-4 mt-4">
-      <a href="https://kushal-rathod02.github.io/wireless-headphones-landing-page/"
-         target="_blank"
-         class="bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-700">
-        Live Demo
-      </a>
+        <!-- 4. Projects Section: NOW WITH WEB DEV AND EC PROJECTS -->
+        <section id="projects" class="py-20 px-8 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">Featured Projects</h2>
+            <!-- Grid adjusted to show more projects -->
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <a href="https://github.com/Kushal-rathod02/wireless-headphones-landing-page"
-         target="_blank"
-         class="border border-gray-500 px-4 py-2 rounded hover:bg-gray-700">
-        GitHub
-      </a>
-    </div>
-  </div>
-</section>
+                <!-- ------------------------ WEB DEVELOPMENT PROJECTS ------------------------ -->
+                
+                <!-- Project Card 1: E-Commerce Landing Page (Responsive Design Focus) -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-2xl card-hover">
+                    <div class="flex items-start mb-3">
+                         <i data-lucide="monitor-dot" class="w-6 h-6 mr-2 text-indigo-400 icon-bounce mt-1"></i>
+                        <h3 class="text-lg font-semibold text-gray-100">Wireless Headphones Landing Page</h3>
+                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">
+Responsive product landing page built using <b>HTML</b> and <b>Tailwind CSS</b>,
+optimized for mobile and desktop devices.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-indigo-900/50 text-indigo-300 px-2 py-0.5 rounded-full">HTML5</span>
+                        <span class="bg-indigo-900/50 text-indigo-300 px-2 py-0.5 rounded-full">Tailwind CSS</span>
+                    </div>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="https://delicate-youtiao-bd8d5b.netlify.app/" target="_blank"
+class="inline-flex items-center text-xs font-medium text-indigo-400 hover:text-indigo-300">
+Live Demo
+</a>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-6 border-t border-gray-800 text-center">
-  <h2 class="text-4xl font-bold text-indigo-400 mb-6">Contact</h2>
-  <p class="text-gray-300">Email: rathodkushal037@gmail.com</p>
-  <p class="text-gray-300 mt-2">Phone: 9054334408</p>
-</section>
+<a href="https://github.com/Kushal-rathod02/wireless-headphones-landing-page"
+target="_blank"
+class="inline-flex items-center text-xs font-medium text-gray-400 hover:text-white">
+GitHub
+</a>
+                    </div>
+                </div>
 
-<!-- FOOTER -->
-<footer class="py-6 text-center text-gray-500 border-t border-gray-800">
-  © 2026 | Designed & Developed by Kushal Rathod
-</footer>
+                <!-- Project Card 2: Dashboard UI (CSS Structure Focus) -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-2xl card-hover">
+                    <div class="flex items-start mb-3">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6 mr-2 text-indigo-400 icon-bounce mt-1"></i>
+                        <h3 class="text-lg font-semibold text-gray-100">Static Dashboard UI</h3>
+                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">
+                        Static recreation of a professional dashboard. Demonstrated structured component layout and high fidelity CSS skills using **CSS Grid**.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-indigo-900/50 text-indigo-300 px-2 py-0.5 rounded-full">CSS Grid</span>
+                        <span class="bg-indigo-900/50 text-indigo-300 px-2 py-0.5 rounded-full">UI/UX</span>
+                    </div>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-indigo-400 hover:text-indigo-300 transition duration-300">
+                            <i data-lucide="globe" class="w-3 h-3 mr-1"></i> Live
+                        </a>
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-gray-400 hover:text-white transition duration-300">
+                            <i data-lucide="github" class="w-3 h-3 mr-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ------------------------ EC PROJECTS ------------------------ -->
 
-<script>
-  lucide.createIcons();
-</script>
+                <!-- Project Card 3: EC Project - Microcontroller-based System -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-2xl card-hover">
+                    <div class="flex items-start mb-3">
+                        <i data-lucide="chip" class="w-6 h-6 mr-2 text-red-400 icon-bounce mt-1"></i>
+                        <h3 class="text-lg font-semibold text-gray-100">Microcontroller-Based LED Display</h3>
+                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">
+                        Implemented a dynamic display system using a **Microcontroller (e.g., Arduino/8051)** and custom C/C++ programming for pattern generation.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">Microcontrollers</span>
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">C/C++</span>
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">Digital Logic</span>
+                    </div>
+                    <div class="mt-4 flex space-x-3">
+                         <!-- EC projects often don't have live links, so we'll use a documentation placeholder -->
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-red-400 hover:text-red-300 transition duration-300">
+                            <i data-lucide="book-open" class="w-3 h-3 mr-1"></i> Documentation (Placeholder)
+                        </a>
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-gray-400 hover:text-white transition duration-300">
+                            <i data-lucide="git-fork" class="w-3 h-3 mr-1"></i> Schematic (Placeholder)
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4: EC Project - Sensor Based Monitoring -->
+                <div class="bg-gray-800 p-5 rounded-xl shadow-2xl card-hover">
+                    <div class="flex items-start mb-3">
+                        <i data-lucide="gauge" class="w-6 h-6 mr-2 text-red-400 icon-bounce mt-1"></i>
+                        <h3 class="text-lg font-semibold text-gray-100">Basic Sensor Data Acquisition</h3>
+                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">
+                        Project focusing on interfacing basic **Analog/Digital Sensors (e.g., Temperature)** with an MCU for data logging and basic signal processing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">Sensor Interfacing</span>
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">Circuit Design</span>
+                        <span class="bg-red-900/50 text-red-300 px-2 py-0.5 rounded-full">Data Acquisition</span>
+                    </div>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-red-400 hover:text-red-300 transition duration-300">
+                            <i data-lucide="book-open" class="w-3 h-3 mr-1"></i> Documentation (Placeholder)
+                        </a>
+                        <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-gray-400 hover:text-white transition duration-300">
+                            <i data-lucide="git-fork" class="w-3 h-3 mr-1"></i> Schematic (Placeholder)
+                        </a>
+                    </div>
+                </div>
 
-</body>
-</html>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="py-20 px-8 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-400">Get In Touch</h2>
+            <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
+                <p class="text-center text-gray-300 mb-6">
+                    I'm currently open to new opportunities. Whether you have a project idea or just want to chat, feel free to reach out via email or phone!
+                </p>
+
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full py-2 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
+                        Send Message
+                    </button>
+                    <div id="form-message" class="text-center mt-4 text-sm hidden"></div>
+                </form>
+
+                <!-- Social Links: LinkedIn, Email, and Phone Number -->
+                <div class="flex justify-center space-x-6 mt-8 border-t border-gray-700 pt-6">
+                    <a href="https://www.linkedin.com/in/gecdhd-ec-kushalrathod?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-indigo-400 transition duration-300">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:rathodkushal037@gmail.com" class="text-gray-400 hover:text-indigo-400 transition du
