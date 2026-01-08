@@ -30,4 +30,4 @@ I am **not associated** with:
 👉 Live Website (GitHub Pages): https://kushal-rathod02.github.io/kushal-portfolio/ 
 
 ---
-**Keywords:** Kushal Rathod, Kushal Rathod Frontend Developer, Kushal Rathod Engineering Student, Kushal Rathod UI UX, Kushal Rathod GitHub, Kushal Rathod India
+**Keywords:** Kushal Rathod, Kushal Rathod Frontend Developer, Kushal Rathod Engineering Student, Kushal Rathod UI/UX, Kushal Rathod GitHub, Kushal Rathod India
