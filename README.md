@@ -22,7 +22,7 @@ I am **not associated** with:
 - Git & GitHub
 
 ## 🌐 Portfolio
-👉 https://delicate-youtiao-bd8d5b.netlify.app/
+👉 https://kushal-rathod02.github.io/kushal-portfolio/
 
 ## 📫 Connect with me
 - LinkedIn: https://www.linkedin.com/in/kushal-rathod-43282a327
